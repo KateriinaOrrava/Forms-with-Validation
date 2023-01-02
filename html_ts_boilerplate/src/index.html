@@ -9,159 +9,407 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="/favicon.png" type="image/x-icon" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap');
-      </style>
-      
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap");
+    </style>
+
     <link rel="stylesheet" href="/styles.css" />
     <title>Sign In - FORM</title>
   </head>
   <body>
-    <div class="container">
-      <section class="sign-in-form-light">
-        <form method="get">
-          <div class="username-section">
-            <label>
-              <p class="input-username">Username</p>
+    <section class="full-content">
+      <div class="container">
+        <div class="toggle">
+          <button onClick="switchMode()">
+            <div class="circle"></div>
+            <img
+              src="assets/images/moon.png"
+              alt=""
+              class="dark"
+              style="width: 40px; height: 40px"
+            />
+
+            <img
+              src="assets/images/sun.png"
+              alt=""
+              class="light"
+              style="width: 40px; height: 40px"
+            />
+          </button>
+        </div>
+
+        <section class="sign-in-form-light">
+          <form method="get">
+            <div class="username-section">
+              <label>
+                <p class="input-username">Username</p>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Enter your username"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="password-section">
+              <label
+                ><p class="input-password">Password</p>
+                <input
+                  name="password"
+                  type="password"
+                  id="password"
+                  placeholder="●●●●●●●●"
+                  required
+                />
+              </label>
+            </div>
+
+            <br />
+
+            <div class="subscription-switch">
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <p class="subscription-switch-light">Subscribe to News</p>
+            </div>
+
+            <div class="sign-in-button-section">
+              <button type="submit" id="submit-sign-in">Sign In</button>
+            </div>
+
+            <div class="orText">
+              <a href="#"
+                ><p class="question-password">Forgot your password?</p></a
+              >
+            </div>
+
+            <hr />
+
+            <div class="forgot">
+              <p class="option-social">or continue with</p>
+            </div>
+
+            <div class="social">
+              <button>
+                <img
+                  src="assets/images/google (1) 1.png"
+                  alt="google-logo"
+                  class="social-logo"
+                />
+              </button>
+              <button>
+                <img
+                  src="assets/images/image 1.png"
+                  alt="facebook-logo"
+                  class="social-logo"
+                />
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!--CONTACT US - 1-->
+
+        <section class="contact-us-form-light" id="contact-us-form">
+          <h2 class="contact-us">Contact Us</h2>
+          <form method="get" class="contact-us-form">
+            <div class="contact-us-name-surname-number-email-container">
+              <div class="contact-us-main-info">
+                <div class="contact-us-main-info-a">
+                  <div class="name-section">
+                    <label>
+                      <p class="input-name">Enter name:</p>
+                      <input
+                        type="text"
+                        id="name"
+                        placeholder="Example: James"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div class="number-section">
+                    <label
+                      ><p class="input-number">Enter number (xx-xxx-xxx):</p>
+                      <input
+                        type="tel"
+                        name="telephone"
+                        id="telephone"
+                        pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}"
+                        placeholder="Example: 00-700-700"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+                <div class="contact-us-main-info-b">
+                  <div class="surname-section">
+                    <label>
+                      <p class="input-surname">Enter surname:</p>
+                      <input
+                        type="text"
+                        id="surname"
+                        placeholder="Example: Bond"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <div class="email-section">
+                    <label>
+                      <p class="input-email">Enter email:</p>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Example: iambond@james.com"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--checkbox , text area and button-->
+
+            <div class="subscribe-contact-us">
               <input
-                type="text"
-                id="username"
-                placeholder="Enter your username"
+                type="checkbox"
+                id="subscribe-to-news"
+                name="subscribe-to-news"
+              />
+              <label for="subscribe-to-news">
+                <p class="subscribe-to-news">Subscribe to news</p></label
+              >
+            </div>
+
+            <div class="contact-us-message">
+              <p class="contact-us-message-text">Message</p>
+              <textarea
+                rows="5"
+                id="contact-us-message"
+                name="description"
                 required
-              />
-            </label>
+              >
+Type Message      </textarea
+              >
+            </div>
+            <div class="contact-us-1-section">
+              <input type="submit" id="submit-contact-us-1" />
+            </div>
+          </form>
+        </section>
+
+        <!--CONTACT US - 2 -->
+        <section class="contact-us-2">
+          <div class="contact-us-2-company-info" id="contact-us-2-company-info">
+            <div class="company-info-content">
+              <p class="contact-info-header">Contact Information</p>
+              <p class="contact-info">
+                Here’s some additional support text to help set user
+                expectations.
+              </p>
+              <div class="contact-info-number">
+                <img src="assets/images/tel.png" alt="phone-logo" />
+                <p>123-456-7890</p>
+              </div>
+              <div class="contact-info-email">
+                <img src="assets/images/Mail.png" alt="email.logo" />
+                <p>support@minerva.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-us-info-2">
+            <h2 class="contact-us-2-header">Contact Us</h2>
+            <form method="get" class="contact-us-form-2">
+              <div class="contact-us-main-info-2">
+                <div class="contact-us-main-info-2-a">
+                  <div class="name-section-2">
+                    <label>
+                      <p class="input-name-2">Enter your name:</p>
+                      <input
+                        type="text"
+                        id="name-2"
+                        placeholder="Example: James"
+                        required
+                      />
+                    </label>
+                  </div>
+                  <div class="number-section-2">
+                    <label
+                      ><p class="input-number-2">
+                        Enter your number (xx-xxx-xxx):
+                      </p>
+                      <input
+                        type="tel"
+                        name="telephone"
+                        id="telephone-2"
+                        pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}"
+                        placeholder="Example: 00-700-700"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+                <div class="contact-us-main-info-2-b">
+                  <div class="surname-section-2">
+                    <label>
+                      <p class="input-surname-2">Enter your surname:</p>
+                      <input
+                        type="text"
+                        id="surname-2"
+                        placeholder="Example: Bond"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <div class="email-section-2">
+                    <label>
+                      <p class="input-email-2">Enter email:</p>
+                      <input
+                        type="email"
+                        id="email-2"
+                        name="email"
+                        placeholder="Example: iambond@james.com"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-us-message-2">
+                <p class="contact-us-message-text" -2>Message</p>
+                <textarea
+                  rows="5"
+                  id="contact-us-message-2"
+                  name="description"
+                  required
+                  cols="70%"
+                >
+                </textarea>
+              </div>
+            </form>
+            <div class="submit-button" id="submit-button-section-form-2">
+              <input type="submit" id="submit-contact-us-2" />
+            </div>
+          </div>
+        </section>
+
+        <!--CHECK OUT -->
+        <section class="check-out">
+          <div class="check-out-header-conatiner">
+            <h2 class="check-out-header">Check Out</h2>
           </div>
 
-          <div class="password-section">
-            <label
-              ><p class="input-password">Password</p>
-              <input
-                name="password"
-                type="password"
-                id="password"
-                placeholder="●●●●●●●●"
-                required
-              />
-            </label>
+          <div class="your-order">
+            <div class="your-order-info">
+              <h5 class="your-order check-out-small-header">Your Order</h5>
+              <div class="order-description">
+                <p class="order-piece check-out-small-text-bold">
+                  Eggshell Plant Pot
+                </p>
+                <p class="order-size small check-out-small-text">
+                  Size: Medium
+                </p>
+                <p class="order-qty small check-out-small-text">Qty: 1</p>
+                <p class="order-price small check-out-small-text">$25.00</p>
+              </div>
+            </div>
+            <div class="delivery-details">
+              <h5 class="delivery-details check-out-small-header">
+                Delivery Details
+              </h5>
+              <div class="delivery-details-info">
+                <div class="order-receiver">
+                  <p class="name-surname check-out-small-text-bold">
+                    Adam Sandler
+                  </p>
+                  <p class="street small check-out-small-text">1234 Fake St</p>
+                  <p class="adress small check-out-small-text">
+                    Milwaukee, WI 53203
+                  </p>
+                </div>
+                <div class="shipping-info">
+                  <p class="shipping-type check-out-small-text-bold">
+                    Shipping Speed
+                  </p>
+                  <p class="shipping-price small check-out-small-text">
+                    $7.00 No Rush Shipping
+                  </p>
+                  <p class="shipping-date small check-out-small-text">
+                    Arrives by 1/16/22
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-method">
+            <h5 class="payment-method check-out-small-header">
+              Payment Method
+            </h5>
+            <div class="check-out-form">
+              <form>
+              <div class="card-information">
+                <div class="name-on-card">
+                  <label for="card-name" class="card-info">Name on Card</label>
+                  <input
+                    type="text"
+                    id="card-name"
+                    name="card-name"
+                    placeholder="John More Doe"
+                    required
+                  />
+                </div>
+                <div class="card-info-small-size">
+                  <div class="number-on-card">
+                    <label for="card-num" class="card-info"
+                      >Credit card number</label
+                    >
+                    <input
+                      type="text"
+                      id="card-num"
+                      name="card-number"
+                      required
+                      placeholder="111-222-333-444"
+                    />
+                  </div>
+                  <div class="date-on-card">
+                    <label for="expmonth" class="card-info">Exp Month</label>
+                    <input
+                      type="text"
+                      id="exp-month"
+                      name="exp-month"
+                      required
+                      placeholder="September"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <br />
-
-          <div class="subscription-switch">
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
-            </label>
-            <p class="subscription-switch">Subscribe to News</p>
-          </div>
-
-          <div class="sign-in-button-section">
-            <button type="submit">Sign In</button>
-          </div>
-
-          <div class="orText">
-            <a href="#"
-              ><p class="question-password">Forgot your password?</p></a
-            >
-          </div>
-
-          <hr />
-
-          <div class="forgot">
-            <p class="option-social">or continue with</p>
-          </div>
-
-          <div class="social">
-            <button>
-              <img
-                src="assets/images/google (1) 1.png"
-                alt="google-logo"
-                class="social-logo"
-              />
-            </button>
-            <button>
-              <img
-                src="assets/images/image 1.png"
-                alt="facebook-logo"
-                class="social-logo"
-              />
-            </button>
-          </div>
-        </form>
-      </section>
-
-      <section class="sign-in-form-dark">
-        <form method="get">
-          <div class="username-section">
-            <label>
-              <p class="input-username">Username</p>
-              <input
-                type="text"
-                id="username"
-                placeholder="Enter your username"
-                required
-              />
-            </label>
-          </div>
-
-          <div class="password-section">
-            <label
-              ><p class="input-password">Password</p>
-              <input
-                name="password"
-                type="password"
-                id="password"
-                placeholder="●●●●●●●●"
-                required
-              />
-            </label>
-          </div>
-
-          <br />
-
-          <div class="subscription-switch">
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
-            </label>
-            <p class="subscription-switch">Subscribe to News</p>
-          </div>
-
-          <div class="sign-in-button-section">
-            <button type="submit">Sign In</button>
-          </div>
-
-          <div class="orText">
-            <a href="#"
-              ><p class="question-password">Forgot your password?</p></a
-            >
-          </div>
-
-          <hr />
-
-          <div class="forgot">
-            <p class="option-social">or continue with</p>
-          </div>
-
-          <div class="social">
-            <button>
-              <img
-                src="assets/images/google (1) 1.png"
-                alt="google-logo"
-                class="social-logo"
-              />
-            </button>
-            <button>
-              <img
-                src="assets/images/image 1.png"
-                alt="facebook-logo"
-                class="social-logo"
-              />
-            </button>
-          </div>
-        </form>
-      </section>
-
-      <script src="/scripts.js"></script>
-    </div>
+          <div class="continue-button-container">
+            <input type="submit" id="submit-check-out" value="Continue" />
+          </div></form>
+        </section>
+      </div>
+    </section>
   </body>
+  <script>
+    function switchMode() {
+      const section = document.querySelector(".full-content");
+      const sun = document.querySelector(".light");
+      const moon = document.querySelector(".dark");
+
+      if (section.classList.contains("dark-mode")) {
+        sun.classList.remove("opct-0");
+        moon.classList.add("opct-0");
+        section.classList.remove("dark-mode");
+      } else {
+        sun.classList.add("opct-0");
+        moon.classList.remove("opct-0");
+        section.classList.add("dark-mode");
+      }
+    }
+  </script>
 </html>

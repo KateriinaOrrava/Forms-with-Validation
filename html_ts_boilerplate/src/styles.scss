@@ -32,9 +32,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  margin-top: 10%;
   display: flex;
-
   align-content: center;
   justify-content: center;
   min-height: 100vh;
@@ -80,16 +78,243 @@ select {
 
 .container {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.sign-in-form-light,
+.contact-us-form-light,
+.check-out {
+  height: max-content;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #130f1c;
+  padding-bottom: 4px;
+  background: #ffffff;
+  padding: 32px;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #ffffff;
+  /* Box Shadow */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.sign-in-form-light {
+  max-width: 430px;
+}
+.contact-us-form-light {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  width: 680px;
+  gap: 32px;
+}
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact-us-name-surname-number-email-container .contact-us-main-info {
+  display: flex;
   flex-direction: row;
-  column-gap: 20%;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
+h2.contact-us,
+h2.contact-us-2-header,
+h2.check-out-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: -0.02em;
+
+  /* Dark Purple/100 */
+
+  color: #130f1c;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.contact-us-name-surname-number-email-container .contact-us-main-info-a,
+.contact-us-name-surname-number-email-container .contact-us-main-info-b {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 45%;
+}
+
+.contact-us-2 {
+  height: max-content;
+  font-family: "Roboto Condensed";
+
+  background: #ffffff;
+  box-shadow: 40px 40px 60px rgba(0, 0, 0, 0.1);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  width: 665px;
+}
+.contact-us-2-company-info {
+  background-color: #651fff;
+  border-radius: 10px 0px 0px 10px;
+  width: 216px;
+  padding: 46px 16px 0px 16px;
+}
+.company-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #ffffff;
+}
+p.contact-info-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  letter-spacing: -0.02em;
+}
+p.contact-info,
+.contact-info-email p,
+.contact-info-number p {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.contact-info-email,
+.contact-info-number {
+  display: flex;
+  flex-direction: row;
+  gap: 9.5px;
+}
+.contact-us-info-2 {
+  background-color: white;
+  border-radius: 0px 10px 10px 0px;
+  width: 449px;
+  padding: 46px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.contact-us-main-info-2-a,
+.contact-us-main-info-2-b {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+.check-out {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+  padding: 32px;
+  width: 665px;
+}
+.contact-us-main-info-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.continue-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.input-username,
+.input-password,
+.input-name,
+.input-surname,
+.input-number,
+.input-email,
+.input-name-2,
+.input-surname-2,
+.input-number-2,
+.input-email-2,
+p.contact-us-message,
+.card-info {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #130f1c;
+  padding-bottom: 4px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+#username,
+#password,
+#name,
+#surname,
+#telephone,
+#email,
+#name-2,
+#surname-2,
+#telephone-2,
+#email-2,
+#contact-us-message,
+#contact-us-message-2,
+#card-name,
+#card-num,
+#exp-month {
+  background-color: #fafafa;
+  color: #bab9bd;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-family: "Roboto Condensed";
+  padding: 12px 0px 12px 12px;
+  border: none;
+  width: 100%;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
 .subscription-switch {
   display: flex;
   flex-direction: row;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #484848;
+  margin-bottom: 20px;
 }
+//.subscription-switch-dark {color: #bab9bd;}
 .switch {
-  margin-left: 10px;
+  margin-right: 10px;
   position: relative;
   display: inline-block;
   width: 28px;
@@ -144,19 +369,125 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.subscription-switch {
+.sign-in-button-section {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
-
-button {
+button#submit-sign-in {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px 48px;
   gap: 10px;
-  width: 311px;
+
   height: 48px;
+  background: #651fff;
+  border-radius: 5px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-bottom: 32px;
+  border: none;
+  width: 100%;
+}
+.contact-us-1-section {
+  display: flex;
+  justify-content: flex-end;
+}
+#submit-button-section-form-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.check-out-small-header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+  color: #130f1c;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.check-out-small-text-bold {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #130f1c;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.check-out-small-text {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5a5761;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.your-order {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.order-description {
+  padding-left: 66px;
+}
+.your-order-info,
+.delivery-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.delivery-details-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.order-receiver,
+.shipping-info {
+  width: 50%;
+}
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card-information {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  gap: 8px;
+}
+.card-info-small-size {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-between;
+  gap: 8px;
+}
+.name-on-card {
+  flex-grow: 2;
+}
+#submit-contact-us-1,
+#submit-contact-us-2,
+#submit-check-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 48px;
   background: #651fff;
   border-radius: 5px;
   font-family: "Roboto Condensed";
@@ -179,6 +510,8 @@ p.question-password {
   text-align: center;
   margin-bottom: 32px;
 }
+
+//p.question-password-dark,p.option-social-dark { color: #bab9bd;}
 p.option-social {
   font-family: "Roboto Condensed";
   font-style: normal;
@@ -190,7 +523,10 @@ p.option-social {
   margin-bottom: 32px;
   margin-top: 32px;
 }
-
+label.switch {
+  display: flex;
+  flex-direction: row;
+}
 .social {
   display: flex;
   flex-direction: row;
@@ -208,4 +544,198 @@ p.option-social {
   background: #ffffff;
   border: 1px solid #ececee;
   border-radius: 5px;
+  width: 100%;
+}
+.subscribe-contact-us {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+input[type="checkbox"] {
+  accent-color: #fd7918;
+}
+p.subscribe-to-news {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #484848;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 100%;
+}
+///TOGGLE DARK / LIGHT MODE TOGGLE DARK / LIGHT MODE TOGGLE DARK / LIGHT MODE TOGGLE DARK / LIGHT MODE
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle button {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #6628ed91;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.45);
+  margin-top: 30px;
+}
+
+.toggle .circle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translateX(0px);
+}
+
+.dark-mode .toggle .circle {
+  transform: translateX(50px);
+}
+.full-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.full-content * {
+  transition: all 0.5s ease;
+}
+
+.opct-0 {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.dark-mode.full-content {
+  background: #130f1c;
+}
+
+.dark-mode .sign-in-form-light,
+.dark-mode .contact-us-form-light,
+.dark-mode .contact-us-info-2,
+.dark-mode .check-out {
+  background-color: #1f1b29;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+}
+.dark-mode .contact-us-2 {
+  background-color: #1f1b29;
+}
+.dark-mode h2.contact-us,
+.dark-mode h2.contact-us-2-header,
+.dark-mode h2.check-out,
+.dark-mode .check-out-header {
+  color: #99969e;
+}
+.dark-mode .input-username,
+.dark-mode .input-password,
+.dark-mode .input-name,
+.dark-mode .input-surname,
+.dark-mode .input-number,
+.dark-mode .input-email,
+.dark-mode p.contact-us-message-text,
+.dark-mode .input-name-2,
+.dark-mode .input-surname-2,
+.dark-mode .input-number-2,
+.dark-mode .input-email-2,
+.dark-mode p.contact-us-message-text-2,
+.dark-mode .your-order p,
+.dark-mode .check-out-small-header,
+.dark-mode .card-info {
+  color: #bab9bd;
+}
+
+.dark-mode #username,
+.dark-mode #password,
+.dark-mode #name,
+.dark-mode #surname,
+.dark-mode #telephone,
+.dark-mode #email,
+.dark-mode #contact-us-message,
+.dark-mode #name-2,
+.dark-mode #surname-2,
+.dark-mode #telephone-2,
+.dark-mode #email-2,
+.dark-mode #contact-us-message-2,
+.dark-mode #card-name,
+.dark-mode #card-num,
+.dark-mode #exp-month {
+  background-color: #2e2a36;
+}
+.dark-mode p.subscribe-to-news {
+  color: #99969e;
+}
+.dark-mode .social button {
+  background-color: #2e2a36;
+}
+.dark-mode p.question-password {
+  color: #bab9bd;
+}
+@media only screen and (max-width: 680px) {
+  .contact-us-name-surname-number-email-container .contact-us-main-info {
+    flex-direction: column;
+  }
+  .contact-us-form-light,
+  .contact-us-2,
+  .check-out {
+    width: 343px;
+  }
+  .contact-us-name-surname-number-email-container .contact-us-main-info-a,
+  .contact-us-name-surname-number-email-container .contact-us-main-info-b {
+    width: 100%;
+  }
+  .contact-us-form-light textarea {
+    width: 100%;
+  }
+  .contact-us-1-section {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-us-2-company-info {
+    display: none;
+  }
+  .contact-us-main-info-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .check-out,
+  .delivery-details,
+  .check-out-form,
+  .card-information {
+    display: flex;
+    flex-direction: column;
+  }
+  .your-order {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .your-order-info,
+  .delivery-details {
+    width: 100%;
+  }
+  .card-info-small-size {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 }
